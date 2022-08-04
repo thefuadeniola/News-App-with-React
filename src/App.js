@@ -11,12 +11,6 @@ import { Search } from '@mui/icons-material'
 
 
 export default function App () {
-    const [isLoading, setIsLoading] = React.useState(true)
-    React.useEffect(() => {
-        setTimeout(() => {
-          setIsLoading(false);
-        }, 2000);
-      }, []);
       
     const [filterNews, setFilterNews] = React.useState(
         {
@@ -26,7 +20,7 @@ export default function App () {
     )
 
     React.useEffect(()=>{
-        fetch(`http://newsapi.org/v2/top-headlines?country=${filterNews.country}&category=${filterNews.category}&language=en&pageSize=30&apiKey=faf603b411e8416abd64d285b6f31710`)
+        fetch(`https://newsapi.org/v2/top-headlines?country=${filterNews.country}&category=${filterNews.category}&language=en&pageSize=30&apiKey=faf603b411e8416abd64d285b6f31710`)
         .then(res => res.json())
         .then(data => setAllNews(data.articles))
     }, [filterNews])
@@ -45,7 +39,7 @@ export default function App () {
     function searchNews (event) {
         event.preventDefault();     
         const val = document.querySelector('input').value
-        fetch(`http://newsapi.org/v2/top-headlines?q=${val}&language=en&apiKey=faf603b411e8416abd64d285b6f31710`)
+        fetch(`https://newsapi.org/v2/everything?q=${val}&language=en&apiKey=faf603b411e8416abd64d285b6f31710`)
         .then(res => res.json())
         .then(data => setAllNews(data.articles))
     }
