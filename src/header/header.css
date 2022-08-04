@@ -1,0 +1,68 @@
+nav{
+    background: var(--color-white);
+    max-height: 85px;
+    border-bottom: 1px solid var(--color-light) ;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 30px;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.logo{
+    max-height: 40px;
+    margin-top: 25px;
+}
+.logo__header{
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: var(--color-primary);
+    font-size: 32px;
+}
+.logo__class{display:flex;}
+input{background: transparent;}
+.navlinks{
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    gap: 40px;
+}
+.navlink{
+    padding: 20px;
+    gap: 20px;
+}
+.nav__link{
+    color: inherit;
+    cursor: pointer;
+}
+.nav__link:hover{
+    color: var(--color-light);
+}
+.toggler{display: none;}
+.toggler button{
+    color: white;
+    background-color: var(--color-primary);
+    border-radius: 8px;
+    font-family: 'Inter';
+    margin-top: 30px;
+    font-size: 16px;
+    transition: var(--transition);
+    padding: 5px;
+    cursor:pointer;
+}
+@media screen and (max-width:600px) {
+    .navlinks{display: none;}
+    .second__logo{display: none;}
+    .toggler{
+        display: block;
+    }
+
+}
+
+@media screen and (max-width:1024px) {
+    .second__logo{display: none;}
+}
+

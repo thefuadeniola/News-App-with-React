@@ -1,0 +1,45 @@
+.error{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    position: initial;
+}
+.error h2{
+    font-family: 'Mouse Memoirs';
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 48px;
+    letter-spacing: 6px;
+    margin-bottom: 2px;
+    color: var(--color-primary);
+}
+.error h4{
+    font-family: 'Inter';
+    margin-top: 0;
+    margin-bottom: 0;
+    color: var(--color-primary);
+}
+.error ul{
+    margin-top: 0;
+    font-family: 'Inter';
+    color: var(--color-dark);
+    line-height: 30px;
+}
+.error__png img{
+    max-width: 500px;
+}
+@media screen and (max-width:600px) {
+    .error ul{
+        text-align: left;
+    }
+    .error{position: initial;}
+}
+
+@media screen and (max-width:1024px) {
+    .error ul{
+        text-align: left;
+    }
+    .error{position: initial;}
+}
