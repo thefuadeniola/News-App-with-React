@@ -26,7 +26,7 @@ export default function App () {
     )
 
     React.useEffect(()=>{
-        fetch(`http://newsapi.org/v2/top-headlines?country=${filterNews.country}&category=${filterNews.category}&language=en&pageSize=30&apiKey=faf603b411e8416abd64d285b6f31710`)
+        fetch(`https://newsapi.org/v2/top-headlines?country=${filterNews.country}&category=${filterNews.category}&language=en&pageSize=30&apiKey=faf603b411e8416abd64d285b6f31710`)
         .then(res => res.json())
         .then(data => setAllNews(data.articles))
     }, [filterNews])
