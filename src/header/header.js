@@ -23,7 +23,7 @@ export default function Header () {
                     <h2 className='logo__header'>MAVE NEWS.COM</h2>
                 </div>
                 <div className='toggler'>
-                    <button id='toggler'><span>Filter News</span> <AiOutlineMenu/></button>
+  
                 </div>
            </nav>
         </header>
